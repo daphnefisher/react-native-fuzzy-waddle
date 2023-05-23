@@ -18,7 +18,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.preserve_paths = 'README.md', 'package.json', 'index.js'
 
-  spec.source_files  = "PaymentSdk/lakalaPaySDK.framework/Headers/*.{h,m}"
   s.vendored_frameworks = "./ios/TInstall/TInstallSDK.framework"
 
 

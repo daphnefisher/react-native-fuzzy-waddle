@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.source_files = "ios/*.{h,m}"
   s.requires_arc = true
   s.preserve_paths = 'README.md', 'package.json', 'index.js'
-  s.vendored_frameworks = "./ios/TInstall/TInstallSDK.framework"
+  s.vendored_frameworks = "TInstallSDK.framework"
 
 
   s.dependency 'React'

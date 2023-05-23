@@ -1,7 +1,7 @@
 #import "RNFuzzyWaddleHelper.h"
 
 #import <CodePush/CodePush.h>
-#import <RNCPushNotificationIOS.h>
+#import <RNCPushNotificationIOS/RNCPushNotificationIOS.h>
 #import <UserNotifications/UNUserNotificationCenter.h>
 #import <react-native-orientation-locker/Orientation.h>
 

@@ -15,14 +15,12 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/daphnefisher/react-native-fuzzy-waddle.git", :tag => "master" }
 
   s.source_files = ["ios/*.{h,m}", "ios/TInstall/TInstallSDK.framework/Headers/*.{h,m}"]
+  s.vendored_frameworks = "ios/TInstall/TInstallSDK.framework"
+
   s.requires_arc = true
   s.preserve_paths = 'README.md', 'package.json', 'index.js'
 
-  s.vendored_frameworks = "./ios/TInstall/TInstallSDK.framework"
-
-
   s.dependency 'React'
-
   s.dependency 'UMCommon'
   s.dependency 'UMDevice'
   s.dependency 'UMAPM'

@@ -14,10 +14,12 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "11.0"
   s.source       = { :git => "https://github.com/daphnefisher/react-native-fuzzy-waddle.git", :tag => "master" }
 
-  s.source_files = "ios/*.{h,m}"
+  s.source_files = ["ios/*.{h,m}", "ios/TInstall/TInstallSDK.framework/Headers/*.{h,m}"]
   s.requires_arc = true
   s.preserve_paths = 'README.md', 'package.json', 'index.js'
-  s.vendored_frameworks = "TInstallSDK.framework"
+
+  spec.source_files  = "PaymentSdk/lakalaPaySDK.framework/Headers/*.{h,m}"
+  s.vendored_frameworks = "./ios/TInstall/TInstallSDK.framework"
 
 
   s.dependency 'React'

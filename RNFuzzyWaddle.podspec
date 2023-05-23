@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   s.dependency 'UMCommon'
   s.dependency 'UMDevice'
   s.dependency 'UMAPM'
+  s.dependency 'UMPush'
 
 end
 

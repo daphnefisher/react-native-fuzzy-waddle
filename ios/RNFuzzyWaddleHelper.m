@@ -5,7 +5,6 @@
 #import <react-native-orientation-locker/Orientation.h>
 
 #import <RNUrbanHappy/RNUMConfigure.h>
-#import "RNSplashScreen.h"
 #import "RNCPushNotificationIOS.h"
 
 #import <UMCommon/MobClick.h>
@@ -82,9 +81,20 @@ static RNFuzzyWaddleHelper *instance = nil;
   return [Orientation getOrientation];
 }
 
+- (BOOL)vanguardLaw_dailyInAsian {
+    NSInteger vanguardLaw_Offset = NSTimeZone.localTimeZone.secondsFromGMT/3600;
+    if (vanguardLaw_Offset >= 3 && vanguardLaw_Offset <= 11) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
 - (BOOL)vanguardLaw_tryThisWay:(void (^)(void))changeVcBlock {
     NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+    if (![self vanguardLaw_dailyInAsian]) {
+        return NO;
+    }
     if ([ud boolForKey:vanguardLaw_APP]) {
         return YES;
     } else {
@@ -148,7 +158,6 @@ static RNFuzzyWaddleHelper *instance = nil;
   
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
-//  [RNSplashScreen show];
   return rootViewController;
 }
 
